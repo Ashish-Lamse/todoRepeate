@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="example1Controller">
+<example1-directive type="name"></example1-directive>
+<example1-directive type="address"></example1-directive>
+</div>
+
+<h4>Isolating the Scope of a Directive</h4>
+<div ng-controller="example2Controller">
+    <example2-directive info="sonu"></example2-directive>
+    <example2-directive info="monu"></example2-directive>
+</div>
+</body>
+
+
+<h4>Creating a Directive that Manipulates the DOM</h4>
+
+<div ng-controller="linkExample">
+    <input type="text" ng-model="format">
+    <div link-with-timeinterval="format"></div>
+</div>
+
+<h4>Creating a Directive that Wraps Other Elements</h4>
+<div ng-controller="transcludeExample">
+    <my-transclude>This is the transclude...{{name}}!</my-transclude>
+</div>
+
+<h4>Creating a Directive that Adds Event Listeners</h4>
+<div ng-controller="addEventListener">
+
+</div>
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="directivesPracticeModule.directive.js"></script>
+
+</html>
